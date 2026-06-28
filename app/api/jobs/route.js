@@ -4,7 +4,7 @@ export async function GET() {
   try {
     const client = await clientPromise;
 
-    const db = client.db("jobfinder");
+    const db = client.db("Job-Portal");
 
     const jobs = await db
       .collection("jobs")
@@ -42,7 +42,7 @@ export async function POST(req) {
 
     const client = await clientPromise;
 
-    const db = client.db("jobfinder");
+    const db = client.db("Job-Portal");
 
     const result = await db.collection("jobs").insertOne({
       title,
