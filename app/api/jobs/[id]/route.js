@@ -7,7 +7,7 @@ export async function GET(req, { params }) {
   try {
     const client = await clientPromise;
 
-    const db = client.db("jobfinder");
+    const db = client.db("Job-Portal");
 
     const job = await db
       .collection("jobs")
@@ -37,7 +37,7 @@ export async function PUT(req, { params }) {
 
     const client = await clientPromise;
 
-    const db = client.db("jobfinder");
+    const db = client.db("Job-Porta,");
 
     await db.collection("jobs").updateOne(
       {
@@ -63,7 +63,7 @@ export async function DELETE(req, { params }) {
   try {
     const client = await clientPromise;
 
-    const db = client.db("jobfinder");
+    const db = client.db("Job-Portal");
 
     await db.collection("jobs").deleteOne({
       _id: new ObjectId(params.id),
