@@ -29,7 +29,7 @@ export async function POST(req) {
 
     const client = await clientPromise;
 
-    const db = client.db("jobfinder");
+    const db = client.db("Job-Portal");
 
     const result = await db
       .collection("applications")
