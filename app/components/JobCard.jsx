@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function JobCard({ job }) {
   return (
-    <div className="border rounded-lg p-5 shadow my-5 ">
+    <div className="border rounded-lg p-5 shadow my-5 bg-gray-300 ">
       <h2 className="text-2xl font-bold">
         {job.title}
       </h2>

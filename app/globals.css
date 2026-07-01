@@ -6,6 +6,7 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 @theme inline {
   --color-background: var(--background);
@@ -16,7 +17,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #2b071f;
     --foreground: #ededed;
   }
 }
