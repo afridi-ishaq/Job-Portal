@@ -37,7 +37,7 @@ export async function PUT(req, { params }) {
 
     const client = await clientPromise;
 
-    const db = client.db("Job-Porta,");
+    const db = client.db("Job-Portal");
 
     await db.collection("jobs").updateOne(
       {

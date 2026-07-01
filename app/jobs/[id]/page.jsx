@@ -1,18 +1,21 @@
 import Link from "next/link";
 
+import clientPromise from "@/lib/mongodb";
+import { ObjectId } from "mongodb";
+
 async function getJob(id) {
-  const res = await fetch(
-    `http://localhost:3000/api/jobs/${id}`,
-    {
-      cache: "no-store",
-    }
-  );
+  const client = await clientPromise;
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch job");
-  }
+  const db = client.db("Job-Portal");
 
-  return res.json();
+  const job = await db.collection("jobs").findOne({
+    _id: new ObjectId(id),
+  });
+
+  return {
+    ...job,
+    _id: job._id.toString(),
+  };
 }
 
 export default async function JobDetailsPage({ params }) {
