@@ -26,7 +26,7 @@ export default async function JobsPage() {
         Available Jobs
       </h1>
 
-      <div className="border text-black rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300 bg-white">
+      <div className="border text-black rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300 bg-white gap-4">
         {jobs.map((job) => (
           <JobCard
             key={job._id}
