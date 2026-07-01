@@ -4,7 +4,7 @@ import JobCard from "../components/JobCard";
 async function getJobs() {
   const client = await clientPromise;
 
-  const db = client.db("jobfinder");
+  const db = client.db("Job-Portal");
 
   const jobs = await db
     .collection("jobs")
