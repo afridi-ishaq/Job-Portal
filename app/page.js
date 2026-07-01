@@ -8,7 +8,7 @@ export default function Home() {
           Find Your Dream Job
         </h1>
 
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-gray-300">
            Discover opportunities from top companies around the world.
         </p>
 
